@@ -26,10 +26,10 @@ provider "aws" {
   region = "us-east-1"
 }
 
-# ---------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 # This is the entire infrastructure definition.
 # We say "I want a DynamoDB table with this name" and Terraform handles the rest.
-# ---------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 resource "aws_dynamodb_table" "shopsmart_products" {
   name         = var.table_name
   billing_mode = "PAY_PER_REQUEST"
